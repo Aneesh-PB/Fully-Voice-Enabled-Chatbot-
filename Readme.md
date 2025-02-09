@@ -1,54 +1,57 @@
-# AI Assistant - Voice-Powered Receptionist
+# AI Personal Assistant
 
-## Overview
-This AI Assistant acts as a receptionist using voice input and AI-generated responses. It records audio, transcribes it using OpenAI Whisper, processes the text with Google Gemini, and generates speech responses using ElevenLabs.
+This project is an AI-powered personal assistant that can transcribe speech, generate responses using Gemini AI, and convert text to speech using ElevenLabs. It provides real-time interaction and can assist with various tasks.
 
 ## Features
-- **Voice Recognition**: Uses OpenAI Whisper for transcription.
-- **AI Response Generation**: Utilizes Google Gemini for intelligent responses.
-- **Text-to-Speech**: Converts AI-generated text into speech with ElevenLabs.
-- **Async Processing**: Uses `asyncio` to optimize performance.
+- **Voice Input:** Records user speech and processes it.
+- **Speech-to-Text:** Uses Whisper for transcription.
+- **AI Response:** Utilizes Google Gemini for intelligent responses.
+- **Text-to-Speech:** Converts AI responses to natural-sounding speech with ElevenLabs.
+- **Async Processing:** Optimized for better response time using asynchronous tasks.
 
 ## Installation
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/your-repo/ai-assistant.git
-cd ai-assistant
-```
+### Prerequisites
+Ensure you have Python 3.8+ installed.
 
-### 2. Set Up a Virtual Environment
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/ai-assistant.git
+   cd ai-assistant
+   ```
 
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
+2. Create and activate a virtual environment (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
 
-### 4. Set Up Environment Variables
-Create a `.env` file in the root directory and add your API keys:
-```
-GEMINI_API_KEY=your_google_gemini_key
-ELEVENLABS_API_KEY=your_elevenlabs_key
-```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Create a `.env` file and add your API keys:
+   ```plaintext
+   GEMINI_API_KEY=your_google_gemini_api_key
+   ELEVENLABS_API_KEY=your_elevenlabs_api_key
+   ```
 
 ## Usage
-Run the assistant with:
+Run the assistant:
 ```bash
 python ai_assistant.py
 ```
-The assistant will start listening. Press the `space` key to stop recording.
+Press the **spacebar** to stop recording.
 
-## Dependencies
-- `pyaudio` (for recording audio)
-- `whisper` (for speech-to-text transcription)
-- `google-generativeai` (for AI response generation)
-- `elevenlabs` (for text-to-speech synthesis)
-- `keyboard` (for stopping recording with a keypress)
+## Technologies Used
+- [Whisper](https://github.com/openai/whisper) for speech-to-text
+- [Google Gemini](https://ai.google.dev/) for AI-generated responses
+- [ElevenLabs](https://elevenlabs.io/) for text-to-speech
+- Python (asyncio, threading, pyaudio, dotenv)
 
 ## License
-This project is open-source. Feel free to modify and enhance it!
+This project is licensed under the MIT License.
+
+
 
