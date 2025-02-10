@@ -68,7 +68,9 @@ def record_audio():
 
 def transcribe_audio(audio_data):
     print("Transcribing...")
-    result = whisper_model.transcribe(audio_data)
+    result = whisper_model.transcribe(
+        audio_data
+    )  # We can also use AssumblyAI API here which supports Real-time transcription
     transcript = result["text"].strip()
     print(f"\nUser: {transcript}")
     return transcript
