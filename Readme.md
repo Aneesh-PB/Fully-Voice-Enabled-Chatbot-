@@ -49,9 +49,3 @@ Press the **spacebar** to stop recording.
 - [Google Gemini](https://ai.google.dev/) for AI-generated responses
 - [ElevenLabs](https://elevenlabs.io/) for text-to-speech
 - Python (asyncio, threading, pyaudio, dotenv)
-
-## License
-This project is licensed under the MIT License.
-
-
-
